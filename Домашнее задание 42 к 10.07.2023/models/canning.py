@@ -12,8 +12,8 @@ class Canning(Base):
     __tablename__ = 'canning'
     id = Column(Integer, primary_key=True)
     canning_name = Column(String(100), nullable=False)
-    ingredient1 = (Integer, ForeignKey('vegetables.id'))
-    ingredient2 = (Integer, ForeignKey('fruits.id'))
+    ingredient1 = (Integer, ForeignKey('vegetables.vegetables_name'))
+    ingredient2 = (Integer, ForeignKey('fruits.fruits_name'))
     cans_plan = Column(Integer, nullable=False)
     cans_fact = Column(Integer)
 
